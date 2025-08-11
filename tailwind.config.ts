@@ -52,6 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Agricultural color extensions
+				'forest-green': 'hsl(var(--forest-green))',
+				'sage-green': 'hsl(var(--sage-green))',
+				'wheat-gold': 'hsl(var(--wheat-gold))',
+				'earth-brown': 'hsl(var(--earth-brown))',
+				'sky-blue': 'hsl(var(--sky-blue))',
+				'field-green': 'hsl(var(--field-green))',
+				'harvest-orange': 'hsl(var(--harvest-orange))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -62,6 +70,16 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-earth': 'var(--gradient-earth)',
+				'gradient-sky': 'var(--gradient-sky)',
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'medium': 'var(--shadow-medium)',
+				'strong': 'var(--shadow-strong)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
