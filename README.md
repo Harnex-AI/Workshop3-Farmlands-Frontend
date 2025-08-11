@@ -1,73 +1,90 @@
-# Welcome to your Lovable project
+# Farmlands Field Assistant - Canterbury Operations
 
-## Project info
+A modern Progressive Web Application for agricultural field operations and farmer support in Canterbury, New Zealand.
 
-**URL**: https://lovable.dev/projects/ec9b1abf-f481-4aef-8fcf-70ae179b631a
+## Project Overview
 
-## How can I edit this code?
+This application provides farmers and agricultural workers with a comprehensive dashboard for managing field operations, tracking equipment, monitoring weather conditions, and organizing farming tasks.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- **Dashboard**: Real-time overview of field operations and statistics
+- **Field Management**: Track and manage different agricultural fields
+- **Equipment Tracking**: Monitor farm equipment status and maintenance
+- **Task Management**: Organize and track farming tasks
+- **Analytics**: Data insights for farming operations
+- **Directory**: Contact information and resources
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ec9b1abf-f481-4aef-8fcf-70ae179b631a) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Technologies Used
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Vite** - Fast build tool and development server
+- **TypeScript** - Type-safe JavaScript
+- **React** - Frontend library
+- **shadcn/ui** - Modern UI component library
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Router** - Client-side routing
+- **Recharts** - Charts and data visualization
 
-## How can I deploy this project?
+## Development Setup
 
-Simply open [Lovable](https://lovable.dev/projects/ec9b1abf-f481-4aef-8fcf-70ae179b631a) and click on Share -> Publish.
+### Prerequisites
 
-## Can I connect a custom domain to my Lovable project?
+- Node.js (v18 or higher)
+- npm or yarn package manager
 
-Yes, you can!
+### Installation
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd farm-field-pilot
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:8080`
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
+
+## Project Structure
+
+```
+src/
+├── components/     # Reusable UI components
+│   ├── dashboard/  # Dashboard-specific components
+│   ├── layout/     # Layout components
+│   └── ui/         # Base UI components (shadcn/ui)
+├── pages/          # Application pages/routes
+├── types/          # TypeScript type definitions
+├── data/           # Mock data and constants
+├── hooks/          # Custom React hooks
+├── lib/            # Utility functions
+└── assets/         # Static assets
+```
+
+## Contributing
+
+1. Create a feature branch from `main`
+2. Make your changes
+3. Test thoroughly
+4. Submit a pull request
+
+## License
+
+This project is proprietary software for Farmlands operations.
