@@ -1,0 +1,38 @@
+---
+alwaysApply: true
+description: Farmlands Field Assistant project context and overview
+---
+
+# Farmlands Field Assistant - Project Context
+
+This is a Progressive Web Application for agricultural field operations and farmer support in Canterbury, New Zealand. The app provides farmers with a comprehensive dashboard for managing field operations, tracking equipment, monitoring weather, and organizing farming tasks.
+
+## Tech Stack
+- **Frontend**: React 18 with TypeScript
+- **Build Tool**: Vite (configured in [vite.config.ts](mdc:vite.config.ts))
+- **Package Management**: npm (see [package.json](mdc:package.json))
+- **Styling**: Tailwind CSS with shadcn/ui components
+- **Routing**: React Router DOM
+- **Charts**: Recharts for data visualization
+
+## Key Files
+- Entry point: [main.tsx](mdc:src/main.tsx)
+- Main app component: [App.tsx](mdc:src/App.tsx)
+- HTML template: [index.html](mdc:index.html)
+- Tailwind config: [tailwind.config.ts](mdc:tailwind.config.ts)
+
+## Project Structure
+- `src/components/` - Reusable UI components
+- `src/pages/` - Route components 
+- `src/types/` - TypeScript type definitions in [farming.ts](mdc:src/types/farming.ts)
+- `src/data/` - Mock data in [mockData.ts](mdc:src/data/mockData.ts)
+- `src/lib/` - Utilities in [utils.ts](mdc:src/lib/utils.ts)
+
+## Domain Context
+This is agricultural software focused on:
+- Field management and crop tracking
+- Equipment and machinery monitoring  
+- Task scheduling and management
+- Weather monitoring
+- Farm analytics and reporting
+- Canterbury, New Zealand farming operations

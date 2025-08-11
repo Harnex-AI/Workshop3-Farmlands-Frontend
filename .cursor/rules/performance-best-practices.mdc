@@ -1,0 +1,76 @@
+---
+description: Performance optimization and best practices for field-based mobile usage
+---
+
+# Performance & Best Practices
+
+## Mobile/Field Performance
+This app is used outdoors on tablets/phones with potentially poor connectivity:
+
+- **Lazy Loading**: Implement for route components and large data sets
+- **Image Optimization**: Compress field photos, use appropriate formats
+- **Offline Capability**: Cache critical data for field use
+- **Bundle Size**: Keep JavaScript bundles small for slow connections
+- **Progressive Loading**: Show essential data first, details second
+
+## React Performance
+```typescript
+// Use React.memo for expensive re-renders
+export const FieldCard = React.memo<FieldCardProps>(({ field }) => {
+  // Component implementation
+});
+
+// Optimize context to prevent unnecessary re-renders
+const FieldContext = createContext<FieldContextType>({});
+
+// Use proper dependency arrays in useEffect
+useEffect(() => {
+  fetchFieldData(fieldId);
+}, [fieldId]); // Only re-run when fieldId changes
+```
+
+## Data Loading Patterns
+```typescript
+// Loading states for better UX
+const [isLoading, setIsLoading] = useState(true);
+const [error, setError] = useState<string | null>(null);
+
+// Implement proper error boundaries for field data
+if (error) {
+  return <ErrorFallback message="Failed to load field data" />;
+}
+
+if (isLoading) {
+  return <LoadingSpinner />;
+}
+```
+
+## State Management
+- Keep state close to where it's used
+- Use React Query/SWR for server state if implementing API calls
+- Minimize unnecessary re-renders
+- Use proper TypeScript typing for all state
+
+## Error Handling
+```typescript
+// User-friendly error messages for farmers
+const handleFieldError = (error: Error) => {
+  const userMessage = error.message.includes('network') 
+    ? 'Poor signal - data will sync when connection improves'
+    : 'Unable to load field data. Please try again.';
+  
+  setError(userMessage);
+};
+```
+
+## Accessibility for Outdoor Use
+- Ensure sufficient color contrast for sunlight visibility
+- Large touch targets (minimum 44px) for gloved hands
+- Clear visual hierarchy for quick data scanning
+- Support for landscape orientation (tablets mounted in tractors)
+
+## Code Quality
+- Write self-documenting code with clear agricultural terminology
+- Add comments for complex farming calculations
+- Use TypeScript strictly - leverage [farming.ts](mdc:src/types/farming.ts) types
+- Follow existing patterns in [mockData.ts](mdc:src/data/mockData.ts)

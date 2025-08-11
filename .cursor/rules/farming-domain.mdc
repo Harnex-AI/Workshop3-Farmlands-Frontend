@@ -1,0 +1,54 @@
+---
+description: Agricultural domain knowledge and farming terminology for Canterbury, NZ operations
+---
+
+# Farming Domain Knowledge
+
+## Agricultural Terminology (Canterbury, NZ Context)
+- **Field/Paddock**: Agricultural land parcel for crop production (paddock is NZ terminology)
+- **Yield**: Amount of crop produced per unit area (typically kg/hectare)
+- **Irrigation**: Artificial water application to crops (critical in Canterbury's dry climate)
+- **Cultivation**: Soil preparation for planting
+- **Harvesting**: Gathering mature crops
+- **Fertilizer**: Nutrients applied to enhance crop growth (NPK ratios important)
+- **Pest Control**: Management of harmful insects/diseases
+- **Crop Rotation**: Alternating crops to maintain soil health
+- **Pasture**: Grassland for livestock grazing
+- **Stock**: Livestock (cattle, sheep common in Canterbury)
+
+## Key Farming Operations
+1. **Field Management**: Track crop types, planting dates, growth stages
+2. **Equipment Tracking**: Monitor tractors, harvesters, irrigation systems
+3. **Task Scheduling**: Planting, spraying, fertilizing, harvesting schedules
+4. **Weather Monitoring**: Rainfall, temperature, wind (crucial for Canterbury)
+5. **Yield Analytics**: Production data, efficiency metrics
+6. **Compliance**: Regulatory requirements, environmental standards
+
+## Seasonal Considerations (Southern Hemisphere)
+- **Spring (Sep-Nov)**: Planting season, pasture renewal
+- **Summer (Dec-Feb)**: Growing season, irrigation critical
+- **Autumn (Mar-May)**: Harvesting, soil preparation
+- **Winter (Jun-Aug)**: Maintenance, planning, livestock feeding
+
+## Data Types & Measurements
+Use these units and formats in [farming.ts](mdc:src/types/farming.ts):
+- **Area**: Hectares (ha) - standard in NZ agriculture
+- **Yield**: kg/ha, tonnes/ha
+- **Rainfall**: mm
+- **Temperature**: Celsius
+- **Coordinates**: Decimal degrees (latitude/longitude)
+- **Dates**: ISO format for consistency
+
+## Common Field Status Types
+```typescript
+type FieldStatus = 'planted' | 'growing' | 'ready_to_harvest' | 'harvested' | 'fallow' | 'under_irrigation';
+type TaskStatus = 'pending' | 'in_progress' | 'completed' | 'overdue' | 'cancelled';
+type EquipmentStatus = 'operational' | 'maintenance_due' | 'in_repair' | 'out_of_service';
+```
+
+## Canterbury-Specific Context
+- **Climate**: Semi-arid, irrigation essential
+- **Crops**: Wheat, barley, potatoes, vegetables, dairy pasture
+- **Challenges**: Water management, nor'west winds, frost risk
+- **Regulations**: Environment Canterbury water consents
+- **Infrastructure**: Irrigation schemes, rural roads

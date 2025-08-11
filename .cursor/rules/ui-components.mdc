@@ -1,0 +1,61 @@
+---
+globs: src/components/**/*.tsx
+description: UI component guidelines and shadcn/ui usage for farming interface
+---
+
+# UI Components & Design Guidelines
+
+## shadcn/ui Components
+Always use shadcn/ui components as building blocks. Available components are in `src/components/ui/`:
+
+### Core Components
+- [Card](mdc:src/components/ui/card.tsx) - For grouping related farming information
+- [Button](mdc:src/components/ui/button.tsx) - Actions and navigation
+- [Badge](mdc:src/components/ui/badge.tsx) - Status indicators for fields/tasks
+- [Table](mdc:src/components/ui/table.tsx) - Data-heavy displays
+- [Form](mdc:src/components/ui/form.tsx) - Field data entry
+
+### Data Display
+- [Chart](mdc:src/components/ui/chart.tsx) - Agricultural data visualization
+- [Progress](mdc:src/components/ui/progress.tsx) - Task completion, crop growth
+- [Avatar](mdc:src/components/ui/avatar.tsx) - User profiles, farmer photos
+
+## Color Scheme (Agricultural Theme)
+- **Primary**: Green shades for healthy crops/success (#22c55e, #16a34a, #15803d)
+- **Secondary**: Earth tones (browns, amber) for soil/equipment
+- **Warning**: Amber for attention needed (weather alerts, maintenance)
+- **Error**: Red for critical issues (equipment failure, pest alerts)
+- **Neutral**: Grays for secondary information
+
+## Design Principles
+- **Mobile-First**: Must work on tablets and phones in field conditions
+- **Data Density**: Farmers need lots of information quickly accessible  
+- **Clear Hierarchy**: Critical information (weather, alerts) should be prominent
+- **Practical Colors**: Use colors that work in bright sunlight
+- **Touch-Friendly**: Buttons and interactive elements sized for outdoor use
+
+## Component Structure
+```typescript
+// Dashboard components in src/components/dashboard/
+import { FieldCard } from '@/components/dashboard/FieldCard';
+import { WeatherWidget } from '@/components/dashboard/WeatherWidget';
+import { TasksList } from '@/components/dashboard/TasksList';
+import { StatsOverview } from '@/components/dashboard/StatsOverview';
+
+// Layout components in src/components/layout/
+import { Header } from '@/components/layout/Header';
+import { Navigation } from '@/components/layout/Navigation';
+import { Sidebar } from '@/components/layout/Sidebar';
+```
+
+## Responsive Design
+- Test on tablet sizes (common in farming operations)
+- Ensure touch targets are adequately sized (44px minimum)
+- Consider landscape orientation usage
+- Account for outdoor visibility requirements
+
+## Accessibility
+- Use semantic HTML elements
+- Provide alt text for field/crop images
+- Ensure keyboard navigation works
+- Use proper ARIA labels for farming-specific data
