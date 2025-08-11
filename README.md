@@ -77,14 +77,3 @@ src/
 ├── lib/            # Utility functions
 └── assets/         # Static assets
 ```
-
-## Contributing
-
-1. Create a feature branch from `main`
-2. Make your changes
-3. Test thoroughly
-4. Submit a pull request
-
-## License
-
-This project is proprietary software for Farmlands operations.
