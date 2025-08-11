@@ -6,8 +6,7 @@ import {
   CheckSquare, 
   Wrench, 
   Users, 
-  BarChart3,
-  Settings
+  BarChart3
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -47,11 +46,6 @@ export function Navigation({ className, mobile = false, onItemClick }: Navigatio
       to: '/analytics',
       label: 'Analytics',
       icon: BarChart3
-    },
-    {
-      to: '/settings',
-      label: 'Settings',
-      icon: Settings
     }
   ];
 
